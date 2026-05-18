@@ -1,264 +1,204 @@
+<!-- ضع هذا داخل index.html بالكامل -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LAHAI Petroleum Service B.V</title>
 
-<title>LAHAI Oil Services</title>
+  <link rel="stylesheet" href="assets/style.css">
 
-<link rel="stylesheet" href="assets/style.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:#000;
-color:white;
-overflow-x:hidden;
-}
-
-.hero{
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-overflow:hidden;
-}
-
-.hero video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-2;
-}
-
-.overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
-z-index:-1;
-}
-
-.navbar{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-padding:20px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:10;
-}
-
-.logo img{
-height:90px;
-border-radius:50%;
-}
-
-.nav-links{
-display:flex;
-gap:35px;
-}
-
-.nav-links a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-letter-spacing:1px;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:#d18b1f;
-}
-
-.hero-content{
-max-width:900px;
-padding:20px;
-}
-
-.hero-content h1{
-font-size:90px;
-color:#d18b1f;
-margin-bottom:10px;
-}
-
-.hero-content h2{
-font-size:70px;
-margin-bottom:20px;
-}
-
-.hero-content p{
-font-size:24px;
-line-height:1.7;
-color:#ddd;
-}
-
-.section{
-padding:100px 10%;
-background:#08111f;
-}
-
-.section h2{
-font-size:50px;
-margin-bottom:40px;
-color:#d18b1f;
-text-align:center;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.project-card{
-background:#111;
-border-radius:20px;
-overflow:hidden;
-transition:0.3s;
-}
-
-.project-card:hover{
-transform:translateY(-10px);
-}
-
-.project-card img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-
-.project-card h3{
-padding:20px;
-font-size:24px;
-}
-
-footer{
-padding:40px;
-text-align:center;
-background:#000;
-color:#aaa;
-}
-
-@media(max-width:768px){
-
-.navbar{
-padding:20px;
-flex-direction:column;
-gap:20px;
-}
-
-.nav-links{
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.hero-content h1{
-font-size:55px;
-}
-
-.hero-content h2{
-font-size:40px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
-}
-
-</style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="hero">
+  <!-- Navbar -->
 
-<video autoplay muted loop playsinline>
-<source src="assets/hero-video.mp4" type="video/mp4">
-</video>
+  <header class="navbar">
 
-<div class="overlay"></div>
+    <div class="logo">
+      <img src="assets/new-logo.png" alt="">
+    </div>
 
-<div class="navbar">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </nav>
 
-<div class="logo">
-<img src="assets/new-logo.png">
-</div>
+  </header>
 
-<div class="nav-links">
-<a href="#">ABOUT</a>
-<a href="#">SERVICES</a>
-<a href="#">PROJECTS</a>
-<a href="#">CLIENTS</a>
-<a href="#">CONTACT</a>
-</div>
+  <!-- Hero Section -->
 
-</div>
+  <section class="hero">
 
-<div class="hero-content">
-<h1>LAHAI</h1>
-<h2>OIL SERVICES</h2>
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
 
-<p>
-Professional Oil Field Services, Civil Engineering & Infrastructure Solutions Across Iraq and the Middle East
-</p>
+    <div class="overlay"></div>
 
-</div>
+    <div class="hero-content">
 
-</div>
+      <span class="badge">
+        REGISTERED IN THE NETHERLANDS • GLOBAL PROJECTS
+      </span>
 
-<section class="section">
+      <h1>
+        LAHAI <br>
+        OIL SERVICES
+      </h1>
 
-<h2>OUR PROJECTS</h2>
+      <p>
+        Professional Oil Field Services, Civil Engineering &
+        Infrastructure Solutions Across Iraq and the Middle East
+      </p>
 
-<div class="projects">
+      <a href="#" class="btn">
+        Explore Company
+      </a>
 
-<div class="project-card">
-<img src="assets/crane-fleet.jpg">
-<h3>Crane Fleet Operations</h3>
-</div>
+    </div>
 
-<div class="project-card">
-<img src="assets/pipeline_works.jpg">
-<h3>Pipeline Infrastructure</h3>
-</div>
+  </section>
 
-<div class="project-card">
-<img src="assets/transport-fleet.jpg">
-<h3>Transport Fleet</h3>
-</div>
+  <!-- About -->
 
-<div class="project-card">
-<img src="assets/civil_workers.jpg">
-<h3>Civil Engineering</h3>
-</div>
+  <section class="about">
 
-</div>
+    <div class="about-image">
+      <img src="assets/chairman-portrait.jpg">
+    </div>
 
-</section>
+    <div class="about-content">
 
-<footer>
-© 2026 LAHAI Oil Services — All Rights Reserved
-</footer>
+      <h2>About Company</h2>
+
+      <p>
+        LAHAI Petroleum Service B.V provides high-quality oil field,
+        infrastructure, logistics and engineering solutions with
+        international standards and modern execution.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat-box">
+          <h3>16+</h3>
+          <span>Years Experience</span>
+        </div>
+
+        <div class="stat-box">
+          <h3>120+</h3>
+          <span>Projects</span>
+        </div>
+
+        <div class="stat-box">
+          <h3>9+</h3>
+          <span>Global Clients</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Civil Engineering</h3>
+        <p>
+          Infrastructure development and construction management.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Oil Field Services</h3>
+        <p>
+          Oil logistics, transportation and field operations.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Heavy Equipment</h3>
+        <p>
+          Excavators, cranes, graders and construction fleet.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Logistics</h3>
+        <p>
+          Transportation and support operations across Iraq.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
+  <section class="projects">
+
+    <h2>Projects Gallery</h2>
+
+    <div class="projects-grid">
+
+      <img src="assets/pipeline_works.jpg">
+      <img src="assets/road_paving.jpg">
+      <img src="assets/transport-fleet.jpg">
+      <img src="assets/earthworks_equipment.jpg">
+
+    </div>
+
+  </section>
+
+  <!-- Clients -->
+
+  <section class="clients">
+
+    <h2>Trusted Clients</h2>
+
+    <div class="client-logos">
+
+      <img src="assets/shell-logo.svg">
+      <img src="assets/exxonmobil-logo.svg">
+      <img src="assets/lukoil-logo.svg">
+      <img src="assets/petronas-logo.svg">
+      <img src="assets/eni-logo.svg">
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <h3>LAHAI Petroleum Service B.V</h3>
+
+    <p>
+      Iraq - Basra | info@lahaioil.net
+    </p>
+
+    <span>
+      © 2026 All Rights Reserved
+    </span>
+
+  </footer>
 
 </body>
 </html>
