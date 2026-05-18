@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <path d="M80 6 C80 6 60 14 58 30 C56 46 72 54 80 54 C88 54 104 46 102 30 C100 14 80 6 80 6Z" fill="#fbce07" stroke="#dd1d21" stroke-width="2"/>
+  <path d="M80 12 L80 48 M68 20 L92 20 M65 28 L95 28 M65 36 L95 36 M68 44 L92 44" stroke="#dd1d21" stroke-width="1.5" opacity="0.6"/>
+  <text x="140" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="28" fill="#dd1d21" letter-spacing="3">Shell</text>
+</svg>

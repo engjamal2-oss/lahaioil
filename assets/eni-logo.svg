@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <circle cx="80" cy="30" r="22" fill="#fecb00" stroke="#000" stroke-width="1.5"/>
+  <text x="80" y="37" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="22" fill="#000">eni</text>
+  <path d="M66 18 Q80 6 94 18" stroke="#000" stroke-width="2" fill="none"/>
+  <circle cx="72" cy="22" r="1.5" fill="#000"/>
+  <circle cx="88" cy="22" r="1.5" fill="#000"/>
+</svg>

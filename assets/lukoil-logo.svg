@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <text x="100" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="30" fill="#e31e24" letter-spacing="3">LUKOIL</text>
+  <rect x="10" y="12" width="8" height="36" rx="2" fill="#e31e24"/>
+  <circle cx="14" cy="8" r="5" fill="#e31e24"/>
+</svg>
