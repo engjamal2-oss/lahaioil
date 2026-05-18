@@ -2369,3 +2369,80 @@ section {
 }
 
 }
+/* CINEMATIC HERO UPGRADE */
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0.88),
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.25)
+    );
+    z-index: 1;
+}
+
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 5;
+    max-width: 850px;
+}
+
+.hero-title,
+.hero h1{
+    font-size: 72px !important;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: white;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle,
+.hero p{
+    font-size: 22px !important;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.88);
+    max-width: 760px;
+}
+
+.hero .btn,
+.hero button{
+    background: linear-gradient(135deg,#f59e0b,#ffcc70);
+    color: black;
+    border: none;
+    font-weight: 700;
+    padding: 18px 38px;
+    border-radius: 14px;
+    transition: 0.35s;
+    box-shadow: 0 10px 30px rgba(245,158,11,0.35);
+}
+
+.hero .btn:hover,
+.hero button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(245,158,11,0.45);
+}
+
+@media(max-width:768px){
+
+.hero-title,
+.hero h1{
+    font-size: 42px !important;
+    line-height: 1.2;
+}
+
+.hero-subtitle,
+.hero p{
+    font-size: 17px !important;
+}
+
+}
