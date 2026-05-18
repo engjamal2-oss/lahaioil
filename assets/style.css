@@ -2446,3 +2446,44 @@ section {
 }
 
 }
+/* PREMIUM NAVBAR */
+
+#main-nav{
+    background: rgba(10,15,25,0.72) !important;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+/* SMALLER LOGO */
+
+.site-logo img,
+.nav-logo img{
+    width: 120px !important;
+    height: auto !important;
+    border-radius: 18px;
+}
+
+/* NAV LINKS */
+
+.nav-links a{
+    color: rgba(255,255,255,0.88) !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #f59e0b !important;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.site-logo img,
+.nav-logo img{
+    width: 85px !important;
+}
+
+}
