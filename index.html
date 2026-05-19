@@ -1,5 +1,8 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,307 +13,14 @@
 <link rel="stylesheet" href="assets/style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Tajawal',sans-serif;
-background:#050b16;
-color:white;
-overflow-x:hidden;
-}
-
-.navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(12px);
-}
-
-.logo img{
-height:80px;
-}
-
-nav{
-display:flex;
-gap:35px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-nav a:hover{
-color:#f4a825;
-}
-
-.lang-btn{
-padding:10px 20px;
-background:transparent;
-border:1px solid #f4a825;
-color:#f4a825;
-cursor:pointer;
-border-radius:10px;
-font-weight:700;
-}
-
-.hero{
-height:100vh;
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-overflow:hidden;
-}
-
-.hero-video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-2;
-}
-
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-z-index:-1;
-}
-
-.hero-content{
-max-width:900px;
-padding:20px;
-}
-
-.badge{
-display:inline-block;
-padding:12px 25px;
-border:1px solid rgba(255,166,0,0.4);
-border-radius:50px;
-margin-bottom:25px;
-color:#f4a825;
-font-size:14px;
-}
-
-.hero h1{
-font-size:90px;
-line-height:1.1;
-font-weight:800;
-margin-bottom:25px;
-}
-
-.hero p{
-font-size:24px;
-line-height:1.8;
-color:#d8d8d8;
-margin-bottom:40px;
-}
-
-.btn{
-display:inline-block;
-padding:16px 35px;
-background:#f4a825;
-color:black;
-text-decoration:none;
-border-radius:12px;
-font-weight:800;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-5px);
-}
-
-section{
-padding:120px 8%;
-}
-
-.section-title{
-font-size:48px;
-margin-bottom:60px;
-text-align:center;
-color:#f4a825;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-background:#08101d;
-}
-
-.about img{
-width:100%;
-border-radius:20px;
-}
-
-.about h2{
-font-size:50px;
-margin-bottom:25px;
-}
-
-.about p{
-font-size:20px;
-line-height:1.9;
-color:#d4d4d4;
-}
-
-.stats{
-display:flex;
-gap:25px;
-margin-top:40px;
-}
-
-.stat-box{
-background:#101b2c;
-padding:30px;
-border-radius:18px;
-flex:1;
-text-align:center;
-}
-
-.stat-box h3{
-font-size:40px;
-color:#f4a825;
-margin-bottom:10px;
-}
-
-.services{
-background:#050b16;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:#101b2c;
-padding:40px;
-border-radius:20px;
-transition:.4s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-}
-
-.service-card h3{
-font-size:28px;
-margin-bottom:20px;
-color:#f4a825;
-}
-
-.service-card p{
-line-height:1.8;
-color:#d6d6d6;
-}
-
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.projects-grid img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:20px;
-transition:.4s;
-}
-
-.projects-grid img:hover{
-transform:scale(1.04);
-}
-
-.clients{
-background:#08101d;
-}
-
-.client-logos{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:60px;
-}
-
-.client-logos img{
-height:70px;
-filter:brightness(0) invert(1);
-opacity:.8;
-transition:.3s;
-}
-
-.client-logos img:hover{
-opacity:1;
-transform:scale(1.1);
-}
-
-footer{
-background:black;
-padding:50px;
-text-align:center;
-}
-
-footer h3{
-font-size:32px;
-margin-bottom:15px;
-color:#f4a825;
-}
-
-footer p{
-margin-bottom:10px;
-color:#cfcfcf;
-}
-
-@media(max-width:900px){
-
-.hero h1{
-font-size:55px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-nav{
-display:none;
-}
-
-}
-
-</style>
 
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <header class="navbar">
 
@@ -320,12 +30,61 @@ display:none;
 
 <nav>
 
-<a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-<a href="#about" data-en="About" data-ar="من نحن">About</a>
-<a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
-<a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
-<a href="#clients" data-en="Clients" data-ar="العملاء">Clients</a>
-<a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+<a href="#home"
+data-en="Home"
+data-ar="الرئيسية">
+
+Home
+
+</a>
+
+<a href="#about"
+data-en="About"
+data-ar="من نحن">
+
+About
+
+</a>
+
+<a href="#services"
+data-en="Services"
+data-ar="الخدمات">
+
+Services
+
+</a>
+
+<a href="#projects"
+data-en="Projects"
+data-ar="المشاريع">
+
+Projects
+
+</a>
+
+<a href="#equipment"
+data-en="Equipment"
+data-ar="المعدات">
+
+Equipment
+
+</a>
+
+<a href="#clients"
+data-en="Clients"
+data-ar="العملاء">
+
+Clients
+
+</a>
+
+<a href="#contact"
+data-en="Contact"
+data-ar="اتصل بنا">
+
+Contact
+
+</a>
 
 </nav>
 
@@ -335,77 +94,140 @@ display:none;
 
 </header>
 
+<!-- HERO -->
+
 <section id="home" class="hero">
 
 <video autoplay muted loop playsinline class="hero-video">
+
 <source src="assets/hero-video.mp4" type="video/mp4">
+
 </video>
 
 <div class="overlay"></div>
 
 <div class="hero-content">
 
-<span class="badge"
+<span class="hero-badge"
+
 data-en="REGISTERED IN THE NETHERLANDS • GLOBAL PROJECTS"
-data-ar="شركة مسجلة بهولندا • مشاريع عالمية">
+
+data-ar="شركة مسجلة في هولندا • مشاريع عالمية">
+
 REGISTERED IN THE NETHERLANDS • GLOBAL PROJECTS
+
 </span>
 
 <h1
-data-en="LAHAI<br>OIL SERVICES"
-data-ar="شركة لاهاي<br>للخدمات النفطية">
-LAHAI<br>OIL SERVICES
+
+data-en="LAHAI OIL SERVICES"
+
+data-ar="شركة لاهاي للخدمات النفطية">
+
+LAHAI OIL SERVICES
+
 </h1>
 
 <p
+
 data-en="Professional Oil Field Services, Civil Engineering & Infrastructure Solutions Across Iraq and the Middle East"
-data-ar="خدمات حقول النفط والهندسة المدنية وحلول البنية التحتية في العراق والشرق الأوسط">
+
+data-ar="خدمات حقول النفط والهندسة المدنية والبنى التحتية في العراق والشرق الأوسط">
+
 Professional Oil Field Services, Civil Engineering & Infrastructure Solutions Across Iraq and the Middle East
+
 </p>
 
-<a href="#about" class="btn"
+<a href="#about"
+
+class="hero-btn"
+
 data-en="Explore Company"
+
 data-ar="استكشف الشركة">
+
 Explore Company
+
 </a>
 
 </div>
 
 </section>
 
-<section id="about" class="about">
+<!-- ABOUT -->
 
-<div>
+<section id="about" class="about-section">
+
+<div class="about-image">
+
 <img src="assets/chairman-portrait.jpg">
+
 </div>
 
-<div>
+<div class="about-content">
 
-<h2 data-en="About Company" data-ar="نبذة عن الشركة">
-About Company
+<h2
+
+data-en="About LAHAI"
+
+data-ar="نبذة عن شركة لاهاي">
+
+About LAHAI
+
 </h2>
 
 <p
-data-en="LAHAI Petroleum Service B.V provides high-quality oil field, infrastructure, logistics and engineering solutions with international standards."
-data-ar="توفر شركة لاهاي للخدمات النفطية حلولاً متقدمة في مجالات النفط والبنية التحتية والخدمات اللوجستية وفق أعلى المعايير العالمية.">
-LAHAI Petroleum Service B.V provides high-quality oil field, infrastructure, logistics and engineering solutions with international standards.
+
+data-en="LAHAI Petroleum Service B.V is an international oil services company specialized in civil engineering, oilfield operations, logistics, procurement, HSE consulting and heavy equipment operations."
+
+data-ar="شركة لاهاي للخدمات النفطية هي شركة دولية متخصصة في الخدمات النفطية والهندسة المدنية والخدمات اللوجستية والتجهيزات والاستشارات والمعدات الثقيلة.">
+
+LAHAI Petroleum Service B.V is an international oil services company specialized in civil engineering, oilfield operations, logistics, procurement, HSE consulting and heavy equipment operations.
+
 </p>
 
-<div class="stats">
+<div class="stats-grid">
 
 <div class="stat-box">
+
 <h3>16+</h3>
-<span data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</span>
+
+<span
+data-en="Years Experience"
+data-ar="سنوات خبرة">
+
+Years Experience
+
+</span>
+
 </div>
 
 <div class="stat-box">
+
 <h3>120+</h3>
-<span data-en="Projects" data-ar="مشروع">Projects</span>
+
+<span
+data-en="Projects"
+data-ar="مشروع">
+
+Projects
+
+</span>
+
 </div>
 
 <div class="stat-box">
+
 <h3>9+</h3>
-<span data-en="Global Clients" data-ar="عميل عالمي">Global Clients</span>
+
+<span
+data-en="International Clients"
+data-ar="عملاء دوليين">
+
+International Clients
+
+</span>
+
 </div>
 
 </div>
@@ -414,129 +236,259 @@ LAHAI Petroleum Service B.V provides high-quality oil field, infrastructure, log
 
 </section>
 
-<section id="services" class="services">
+<!-- DIRECTOR -->
+
+<section class="director-section">
+
+<div class="director-box">
+
+<h2
+
+data-en="Managing Director Message"
+
+data-ar="كلمة المدير المفوض">
+
+Managing Director Message
+
+</h2>
+
+<p
+
+data-en="We are committed to delivering international quality standards in oil services, engineering and logistics through innovation, professionalism and operational excellence."
+
+data-ar="نلتزم بتقديم أعلى معايير الجودة العالمية في الخدمات النفطية والهندسية واللوجستية من خلال الابتكار والاحترافية والتميز التشغيلي.">
+
+We are committed to delivering international quality standards in oil services, engineering and logistics through innovation, professionalism and operational excellence.
+
+</p>
+
+<h3>
+Nasser Khalaf Mujahid
+</h3>
+
+<span
+
+data-en="Managing Director"
+
+data-ar="المدير المفوض">
+
+Managing Director
+
+</span>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="services-section">
 
 <h2 class="section-title"
+
 data-en="Our Services"
+
 data-ar="خدماتنا">
+
 Our Services
+
 </h2>
 
 <div class="services-grid">
 
 <div class="service-card">
+
 <h3>Civil Engineering</h3>
-<p>Infrastructure development and construction management.</p>
+
+<p>
+Infrastructure development and construction projects.
+</p>
+
 </div>
 
 <div class="service-card">
+
 <h3>Oil Field Services</h3>
-<p>Oil logistics, transportation and field operations.</p>
+
+<p>
+Oil logistics and field support operations.
+</p>
+
 </div>
 
 <div class="service-card">
+
 <h3>Heavy Equipment</h3>
-<p>Excavators, cranes, graders and construction fleet.</p>
+
+<p>
+Excavators, cranes, graders and transport fleet.
+</p>
+
 </div>
 
 <div class="service-card">
+
 <h3>Logistics</h3>
-<p>Transportation and support operations across Iraq.</p>
+
+<p>
+Integrated transportation and procurement solutions.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>HSE Consulting</h3>
+
+<p>
+Safety, environmental and quality management.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Telecommunication</h3>
+
+<p>
+Communication infrastructure and networking systems.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
+
+<section id="projects" class="projects-section">
 
 <h2 class="section-title"
+
 data-en="Projects Gallery"
+
 data-ar="معرض المشاريع">
+
 Projects Gallery
+
 </h2>
 
 <div class="projects-grid">
 
 <img src="assets/pipeline_works.jpg">
+
 <img src="assets/road_paving.jpg">
+
 <img src="assets/transport-fleet.jpg">
+
 <img src="assets/earthworks_equipment.jpg">
 
 </div>
 
 </section>
 
-<section id="clients" class="clients">
+<!-- EQUIPMENT -->
+
+<section id="equipment" class="equipment-section">
 
 <h2 class="section-title"
-data-en="Trusted Clients"
-data-ar="عملاؤنا">
-Trusted Clients
+
+data-en="Equipment & Machinery"
+
+data-ar="المعدات والآليات">
+
+Equipment & Machinery
+
 </h2>
 
-<div class="client-logos">
+<div class="equipment-grid">
 
-<img src="assets/shell-logo.svg">
-<img src="assets/exxonmobil-logo.svg">
-<img src="assets/lukoil-logo.svg">
-<img src="assets/petronas-logo.svg">
-<img src="assets/eni-logo.svg">
+<div class="equipment-card">
+
+<img src="assets/crane-fleet.jpg">
+
+<h3>Crane Fleet</h3>
+
+</div>
+
+<div class="equipment-card">
+
+<img src="assets/excavator-fleet.jpg">
+
+<h3>Excavator Fleet</h3>
+
+</div>
+
+<div class="equipment-card">
+
+<img src="assets/generator-sets.jpg">
+
+<h3>Generator Sets</h3>
+
+</div>
+
+<div class="equipment-card">
+
+<img src="assets/transport-fleet.jpg">
+
+<h3>Transport Fleet</h3>
+
+</div>
 
 </div>
 
 </section>
 
-<footer id="contact">
+<!-- CLIENTS -->
 
-<h3>LAHAI Petroleum Service B.V</h3>
+<section id="clients" class="clients-section">
 
-<p>Iraq - Basra | info@lahaioil.net</p>
+<h2 class="section-title"
+
+data-en="Trusted Clients"
+
+data-ar="عملاؤنا">
+
+Trusted Clients
+
+</h2>
+
+<div class="clients-grid">
+
+<img src="assets/shell-logo.svg">
+
+<img src="assets/exxonmobil-logo.svg">
+
+<img src="assets/lukoil-logo.svg">
+
+<img src="assets/petronas-logo.svg">
+
+<img src="assets/eni-logo.svg">
+
+<img src="assets/halliburton-logo.svg">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<footer id="contact" class="footer">
+
+<h2>LAHAI Petroleum Service B.V</h2>
+
+<p>Email: info@lahaioil.net</p>
+
+<p>Basra - Al Baradhiyah - Iraq</p>
+
+<p>+964 781 534 0003</p>
 
 <span>© 2026 All Rights Reserved</span>
 
 </footer>
 
-<script>
-
-let currentLang = "en";
-
-function toggleLanguage(){
-
-const html = document.documentElement;
-const button = document.querySelector(".lang-btn");
-
-if(currentLang === "en"){
-
-currentLang = "ar";
-
-html.lang = "ar";
-html.dir = "rtl";
-
-button.innerHTML = "English";
-
-document.querySelectorAll("[data-ar]").forEach(el=>{
-el.innerHTML = el.getAttribute("data-ar");
-});
-
-}else{
-
-currentLang = "en";
-
-html.lang = "en";
-html.dir = "ltr";
-
-button.innerHTML = "العربية";
-
-document.querySelectorAll("[data-en]").forEach(el=>{
-el.innerHTML = el.getAttribute("data-en");
-});
-
-}
-
-}
-
-</script>
+<script src="assets/script.js"></script>
 
 </body>
 </html>
