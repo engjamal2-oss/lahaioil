@@ -1,442 +1,91 @@
-(function () {
-  'use strict';
+// assets/script.js
 
-  var translations = {
-    ar: {
-      'lang.toggle': 'English',
-      'nav.about': 'من نحن',
-      'nav.services': 'الخدمات',
-      'nav.projects': 'المشاريع',
-      'nav.clients': 'العملاء',
-      'nav.equipment': 'المعدات',
-      'nav.hse': 'السلامة',
-      'nav.careers': 'الوظائف',
-      'nav.contact': 'اتصل بنا',
-      'hero.badge': 'شركة مسجلة في هولندا - مشاريع عالمية',
-      'hero.title1': 'شركة لاهاي',
-      'hero.title2': 'للخدمات النفطية',
-      'hero.subtitle': 'خدمات حقول النفط المهنية والهندسة المدنية وحلول البنية التحتية في العراق والشرق الأوسط',
-      'hero.cta1': 'استكشف الخدمات',
-      'hero.cta2': 'تواصل معنا',
-      'stats.projects': 'مشاريع منجزة',
-      'stats.years': 'سنوات الخبرة',
-      'stats.countries': 'دول العمليات',
-      'stats.hse': 'التزام الصحة والسلامة',
-      'about.tag': 'من نحن',
-      'about.title': 'عن شركة لاهاي للخدمات النفطية',
-      'about.chairman.title': 'رسالة الرئيس',
-      'about.chairman.message': '"منذ تأسيسنا، التزمت شركة لاهاي للخدمات النفطية بتقديم خدمات حقول نفط عالمية المستوى بأعلى معايير السلامة والجودة والمسؤولية البيئية. لقد أكسبنا تفانينا في التميز ثقة كبار المشغلين الدوليين، ونواصل توسيع قدراتنا لتلبية المتطلبات المتطورة لقطاع الطاقة العالمي."',
-      'about.chairman.role': 'المدير المفوض',
-      'cmd.tag': 'القيادة التنفيذية',
-      'cmd.title': 'رسالة المدير المفوض',
-      'cmd.name': 'ناصر خلف مجاهد',
-      'cmd.role': 'المدير المفوض',
-      'cmd.company': 'لاهاي للخدمات النفطية (LAHAI B.V.)',
-      'cmd.greeting': 'مرحباً بكم في الموقع الرسمي لشركة لاهاي للخدمات النفطية (LAHAI B.V.)',
-      'cmd.p1': 'منذ تأسيسنا في قطاعات الطاقة وحقول النفط والخدمات اللوجستية، سعينا نحو هدف واحد واضح: أن نصبح الشريك الأكثر ثقة وكفاءة في تنفيذ المشاريع الاستراتيجية التي تسهم في النمو الاقتصادي وتطوير البنية التحتية للنفط والغاز.',
-      'cmd.p2': 'في لاهاي، ننظر إلى خدمات النفط والتمثيل التجاري ليس مجرد أنشطة تشغيلية، بل كالتزام بالتميز والابتكار وخلق قيمة طويلة الأمد. في مشهد طاقة عالمي سريع التطور، نظل ملتزمين بتبني استراتيجيات مستدامة ومرنة تلبي توقعات الشركات الدولية الكبرى والمؤسسات الحكومية.',
-      'cmd.p3': 'تقوم رؤيتنا الاستراتيجية على ركائز أساسية:',
-      'cmd.pillar1': 'حلول ذكية متكاملة',
-      'cmd.pillar2': 'شراكات دولية موثوقة',
-      'cmd.pillar3': 'السلامة والاستدامة البيئية',
-      'cmd.pillar4': 'تطوير المواهب والخبرات المحلية',
-      'cmd.p4': 'نحن فخورون بالثقة التي اكتسبناها وملتزمون بتوسيع آفاقنا الاستثمارية والصناعية بمهنية وشفافية ونزاهة.',
-      'cmd.p5': 'شكراً لزيارتكم موقعنا الإلكتروني. نتطلع إلى بناء مستقبل ناجح ومزدهر معاً.',
-      'about.company.title': 'ملف الشركة',
-      'about.company.desc': 'شركة لاهاي للخدمات النفطية هي شركة دولية مسجلة في هولندا متخصصة في خدمات حقول النفط الشاملة والهندسة المدنية والخدمات اللوجستية والمشتريات واستشارات الصحة والسلامة والبيئة والاتصالات. تعمل من مقرها الرئيسي في البصرة بالعراق وتخدم كبرى شركات النفط الدولية.',
-      'about.mission.title': 'مهمتنا',
-      'about.mission.desc': 'تقديم خدمات طاقة موثوقة وآمنة ومبتكرة تتجاوز توقعات العملاء مع الحفاظ على أعلى معايير الصحة والسلامة والإشراف البيئي.',
-      'about.vision.title': 'رؤيتنا',
-      'about.vision.desc': 'أن نصبح المزود الرائد لخدمات حقول النفط المتكاملة في الشرق الأوسط وشمال أفريقيا، معروفين بالتميز التشغيلي والابتكار التقني.',
-      'about.values.excellence': 'التميز',
-      'about.values.safety': 'السلامة',
-      'about.values.integrity': 'النزاهة',
-      'about.values.innovation': 'الابتكار',
-      'services.tag': 'ماذا نقدم',
-      'services.title': 'خدماتنا',
-      'services.desc': 'حلول شاملة لحقول النفط والبنية التحتية تُقدم بمعايير دولية وخبرة محلية.',
-      'services.civil.title': 'الهندسة المدنية',
-      'services.civil.desc': 'تطوير البنية التحتية وإدارة البناء والهندسة الإنشائية لمنشآت حقول النفط والطرق والجسور والمجمعات الصناعية.',
-      'services.oilfield.title': 'خدمات حقول النفط',
-      'services.oilfield.desc': 'دعم الحفر وخدمات الآبار والعمليات الميدانية وصيانة الحفارات وتوريد وإدارة معدات حقول النفط.',
-      'services.procurement.title': 'المشتريات',
-      'services.procurement.desc': 'التوريد الاستراتيجي وإدارة سلسلة التوريد وشراء المعدات وتأهيل الموردين وإدارة المواد.',
-      'services.logistics.title': 'الخدمات اللوجستية',
-      'services.logistics.desc': 'نقل المعدات الثقيلة وإدارة الأسطول والتخزين والتوزيع والخدمات اللوجستية المتكاملة.',
-      'services.hse.title': 'استشارات الصحة والسلامة',
-      'services.hse.desc': 'أنظمة إدارة الصحة والسلامة والبيئة وتقييم المخاطر وعمليات التدقيق وبرامج التدريب.',
-      'services.telecom.title': 'الاتصالات',
-      'services.telecom.desc': 'تصميم وتركيب شبكات الاتصالات وأنظمة الألياف الضوئية والاتصالات اللاسلكية والبنية التحتية لتكنولوجيا المعلومات.',
-      'projects.tag': 'محفظة الأعمال',
-      'projects.title': 'المشاريع الرئيسية',
-      'projects.desc': 'مجموعة مختارة من المشاريع الكبرى المنجزة في العراق والشرق الأوسط لصالح مشغلين دوليين.',
-      'projects.p1.title': 'عمليات الحقول النفطية — تطوير المواقع والبنية التحتية',
-      'projects.p1.desc': 'تطوير مواقع حقول نفطية واسعة النطاق تشمل أعمال الحفر والتسوية وتحريك المعدات وبناء البنية التحتية لدعم عمليات الطاقة الكبرى في جنوب العراق.',
-      'projects.p2.title': 'حقل الرميلة — أعمال مدنية ومنشآت',
-      'projects.p2.desc': 'تصميم وبناء المنشآت الصناعية ومخيمات العمال والبنية التحتية المساندة في مجمع حقل الرميلة النفطي، أحد أكبر الحقول المنتجة في العالم.',
-      'projects.p3.title': 'غرب القرنة — البنية التحتية وإنشاء الطرق',
-      'projects.p3.desc': 'إنشاء طرق شاملة وتحسين المنشآت وتركيبات المخيمات بما في ذلك تعبيد الأسفلت والبنية التحتية للصرف في أحد أكبر حقول النفط في العراق.',
-      'projects.p4.title': 'عمليات المعدات الثقيلة وأعمال الحفر',
-      'projects.p4.desc': 'أعمال حفر وتحضير أرضي واسعة النطاق باستخدام أسطولنا من حواسيب BOMAG وجرافات Cat والشاحنات القلابة والحفارات لتطوير المواقع الصناعية.',
-      'projects.p5.title': 'تركيب خطوط الأنابيب والجيوتكستيل',
-      'projects.p5.desc': 'أعمال متخصصة في مد خطوط الأنابيب وتركيب الجيوتكستيل مع مسح دقيق ودعم الجرافات ونشر فرق عمل ماهرة عبر مشاريع البنية التحتية النفطية.',
-      'projects.p6.title': 'الخدمات اللوجستية وإدارة الأسطول — عمليات متكاملة',
-      'projects.p6.desc': 'حلول لوجستية شاملة وإدارة أسطول مع أسطول نقل مملوك يشمل الناقلات الثقيلة والشاحنات القلابة والمركبات المتخصصة التي يشغلها طاقمنا المحترف المدرب.',
-      'clients.tag': 'شركاء موثوقون',
-      'clients.title': 'عملاؤنا',
-      'equipment.tag': 'أسطولنا',
-      'equipment.title': 'المعدات والآليات',
-      'equipment.desc': 'أسطول من الآليات الثقيلة والمعدات المتخصصة يتم صيانتها بأعلى المعايير التشغيلية.',
-      'equipment.crane.title': 'أسطول الرافعات المتنقلة',
-      'equipment.excavator.title': 'أسطول الحفارات',
-      'equipment.generator.title': 'مولدات الطاقة',
-      'equipment.hauler.title': 'أسطول النقل الثقيل',
-      'equipment.spec.capacity': 'السعة',
-      'equipment.spec.units': 'الوحدات',
-      'equipment.spec.reach': 'مدى الذراع',
-      'equipment.spec.type': 'النوع',
-      'equipment.spec.power': 'قدرة الإخراج',
-      'equipment.spec.fuel': 'نوع الوقود',
-      'equipment.spec.payload': 'الحمولة',
-      'hse.tag': 'السلامة أولاً',
-      'hse.title': 'الصحة والسلامة والجودة',
-      'hse.zero': 'هدف صفر حوادث',
-      'hse.iso.title': 'شهادة ISO 9001:2015',
-      'hse.iso.desc': 'نظام إدارة جودة معتمد وفق المعايير الدولية في جميع أقسام الخدمات.',
-      'hse.policy.title': 'نظام إدارة الصحة والسلامة',
-      'hse.policy.desc': 'سياسات شاملة للصحة والسلامة والبيئة متوافقة مع معايير IOGP.',
-      'hse.training.title': 'برامج التدريب على السلامة',
-      'hse.training.desc': 'برامج توعية منتظمة بالسلامة وتدريبات الاستجابة للطوارئ وتدريب متخصص لجميع الموظفين.',
-      'hse.env.title': 'الإشراف البيئي',
-      'hse.env.desc': 'مراقبة بيئية استباقية وإدارة النفايات وبرامج منع التلوث في كل عملية.',
-      'org.tag': 'القيادة',
-      'org.title': 'الهيكل التنظيمي',
-      'org.chairman': 'المدير المفوض',
-      'org.coo': 'مدير العمليات',
-      'org.operations': 'العمليات',
-      'org.cfo': 'المدير المالي',
-      'org.finance': 'المالية والإدارة',
-      'org.td': 'المدير الفني',
-      'org.engineering': 'الهندسة',
-      'org.proj': 'إدارة المشاريع',
-      'org.hse': 'قسم الصحة والسلامة',
-      'org.proc': 'المشتريات واللوجستيات',
-      'org.hr': 'الموارد البشرية',
-      'org.qc': 'ضبط الجودة',
-      'careers.tag': 'انضم لفريقنا',
-      'careers.title': 'الوظائف',
-      'careers.desc': 'نبحث دائماً عن محترفين موهوبين للانضمام إلى فريقنا المتنامي في العراق والعمليات الدولية.',
-      'careers.b1.title': 'مشاريع دولية',
-      'careers.b1.desc': 'اعمل في مشاريع حقول نفط كبرى في الشرق الأوسط وشمال أفريقيا مع مشغلين دوليين.',
-      'careers.b2.title': 'ثقافة السلامة أولاً',
-      'careers.b2.desc': 'انضم لشركة تعطي الأولوية لصحتك وسلامتك مع برامج رائدة في الصحة والسلامة.',
-      'careers.b3.title': 'النمو المهني',
-      'careers.b3.desc': 'تدريب مستمر وبرامج إرشاد وفرص تقدم وظيفي لجميع أعضاء الفريق.',
-      'careers.form.title': 'أرسل سيرتك الذاتية',
-      'careers.form.position': 'الوظيفة المطلوبة',
-      'careers.form.select': 'اختر القسم',
-      'careers.form.cv': 'رفع السيرة الذاتية (PDF، حد أقصى 8 ميجابايت)',
-      'careers.form.submit': 'إرسال الطلب',
-      'form.name': 'الاسم الكامل',
-      'form.email': 'البريد الإلكتروني',
-      'form.phone': 'رقم الهاتف',
-      'form.subject': 'الموضوع',
-      'form.message': 'الرسالة',
-      'location.tag': 'موقعنا',
-      'location.title': 'الموقع',
-      'contact.tag': 'تواصل معنا',
-      'contact.title': 'اتصل بنا',
-      'contact.email.label': 'البريد الإلكتروني',
-      'contact.phone.label': 'الهاتف / واتساب',
-      'contact.phone2.label': 'الهاتف الثاني',
-      'contact.address.label': 'العنوان',
-      'contact.address.value': 'العراق - البصرة - البراضعية<br>مقابل السفارة الروسية',
-      'contact.web.label': 'الموقع الإلكتروني',
-      'contact.form.submit': 'إرسال الرسالة',
-      'footer.desc': 'شركة لاهاي للخدمات النفطية — شركة دولية مسجلة في هولندا تقدم خدمات حقول نفط شاملة في العراق والشرق الأوسط.',
-      'footer.quicklinks': 'روابط سريعة',
-      'footer.services': 'الخدمات',
-      'footer.contactinfo': 'معلومات الاتصال',
-      'footer.rights': 'جميع الحقوق محفوظة'
-    }
-  };
+let currentLang = "en";
 
-  var englishTexts = {};
-  var currentLang = 'en';
+function toggleLanguage(){
 
-  function storeEnglish() {
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      if (!englishTexts[key]) {
-        englishTexts[key] = el.innerHTML;
-      }
-    });
-  }
+const html = document.documentElement;
+const button = document.querySelector(".lang-btn");
 
-  function setLanguage(lang) {
-    currentLang = lang;
-    var html = document.documentElement;
+if(currentLang === "en"){
 
-    if (lang === 'ar') {
-      html.setAttribute('dir', 'rtl');
-      html.setAttribute('lang', 'ar');
-      document.querySelectorAll('[data-i18n]').forEach(function (el) {
-        var key = el.getAttribute('data-i18n');
-        if (translations.ar[key]) {
-          el.innerHTML = translations.ar[key];
-        }
-      });
-      document.querySelectorAll('.lang-ar').forEach(function (el) {
-        el.style.display = '';
-      });
-      document.querySelectorAll('.lang-en').forEach(function (el) {
-        el.style.display = 'none';
-      });
-    } else {
-      html.setAttribute('dir', 'ltr');
-      html.setAttribute('lang', 'en');
-      document.querySelectorAll('[data-i18n]').forEach(function (el) {
-        var key = el.getAttribute('data-i18n');
-        if (englishTexts[key]) {
-          el.innerHTML = englishTexts[key];
-        }
-      });
-      document.querySelectorAll('.lang-ar').forEach(function (el) {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll('.lang-en').forEach(function (el) {
-        el.style.display = '';
-      });
-    }
-  }
+currentLang = "ar";
 
-  // Navigation scroll
-  function initNav() {
-    var nav = document.getElementById('main-nav');
-    var menuBtn = document.getElementById('nav-menu-btn');
-    var navLinks = document.getElementById('nav-links');
+html.lang = "ar";
+html.dir = "rtl";
 
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
+button.innerHTML = "English";
 
-    menuBtn.addEventListener('click', function () {
-      menuBtn.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
+document.querySelectorAll("[data-ar]").forEach(el=>{
 
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menuBtn.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
+el.innerHTML = el.getAttribute("data-ar");
 
-    // Active link on scroll
-    var sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', function () {
-      var scrollPos = window.scrollY + 120;
-      sections.forEach(function (section) {
-        var top = section.offsetTop;
-        var height = section.offsetHeight;
-        var id = section.getAttribute('id');
-        var link = navLinks.querySelector('a[href="#' + id + '"]');
-        if (link) {
-          if (scrollPos >= top && scrollPos < top + height) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        }
-      });
-    });
-  }
+});
 
-  // Language toggle
-  function initLangToggle() {
-    var btn = document.getElementById('lang-toggle');
-    btn.addEventListener('click', function () {
-      var lang = document.documentElement.getAttribute('lang');
-      if (lang === 'ar') {
-        setLanguage('en');
-      } else {
-        setLanguage('ar');
-      }
-    });
-  }
+}else{
 
-  // Scroll animations
-  function initScrollAnimations() {
-    var elements = document.querySelectorAll('.anim-fade-up');
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var delay = parseInt(entry.target.getAttribute('data-delay')) || 0;
-          setTimeout(function () {
-            entry.target.classList.add('visible');
-          }, delay);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+currentLang = "en";
 
-    elements.forEach(function (el) {
-      observer.observe(el);
-    });
-  }
+html.lang = "en";
+html.dir = "ltr";
 
-  // Counter animation
-  function initCounters() {
-    var counters = document.querySelectorAll('.stat-number[data-count]');
-    var observed = false;
+button.innerHTML = "العربية";
 
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting && !observed) {
-          observed = true;
-          counters.forEach(function (counter) {
-            animateCounter(counter);
-          });
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.3 });
+document.querySelectorAll("[data-en]").forEach(el=>{
 
-    var statsSection = document.getElementById('stats');
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
-  }
+el.innerHTML = el.getAttribute("data-en");
 
-  function animateCounter(el) {
-    var target = parseInt(el.getAttribute('data-count'));
-    var duration = 2000;
-    var startTime = null;
+});
 
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var progress = Math.min((timestamp - startTime) / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * target);
+}
 
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target;
-      }
-    }
+}
 
-    requestAnimationFrame(step);
-  }
+/* NAVBAR BACKGROUND ON SCROLL */
 
-  // WhatsApp button
-  function initWhatsApp() {
-    var btn = document.getElementById('whatsapp-btn');
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 400) {
-        btn.classList.add('visible');
-      } else {
-        btn.classList.remove('visible');
-      }
-    });
-  }
+window.addEventListener("scroll",()=>{
 
-  // Form handling
-  function initForms() {
-    setupForm('contact-form', 'contact-status');
-    setupForm('careers-form', 'careers-status');
-  }
+const navbar = document.querySelector(".navbar");
 
-  function setupForm(formId, statusId) {
-    var form = document.getElementById(formId);
-    var status = document.getElementById(statusId);
-    if (!form || !status) return;
+if(window.scrollY > 50){
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var formData = new FormData(form);
-      var submitBtn = form.querySelector('button[type="submit"]');
-      var originalText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = currentLang === 'ar' ? 'جارٍ الإرسال...' : 'Sending...';
+navbar.style.background = "rgba(0,0,0,0.75)";
 
-      var isFileUpload = form.querySelector('input[type="file"]');
+}else{
 
-      if (isFileUpload) {
-        fetch('/', {
-          method: 'POST',
-          body: formData
-        }).then(function (response) {
-          if (response.ok) {
-            status.className = 'form-status success';
-            status.textContent = currentLang === 'ar' ? 'تم الإرسال بنجاح!' : 'Submitted successfully!';
-            form.reset();
-          } else {
-            throw new Error('Submission failed');
-          }
-        }).catch(function () {
-          status.className = 'form-status error';
-          status.textContent = currentLang === 'ar' ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'Something went wrong. Please try again.';
-        }).finally(function () {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        });
-      } else {
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(formData).toString()
-        }).then(function (response) {
-          if (response.ok) {
-            status.className = 'form-status success';
-            status.textContent = currentLang === 'ar' ? 'تم الإرسال بنجاح!' : 'Submitted successfully!';
-            form.reset();
-          } else {
-            throw new Error('Submission failed');
-          }
-        }).catch(function () {
-          status.className = 'form-status error';
-          status.textContent = currentLang === 'ar' ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'Something went wrong. Please try again.';
-        }).finally(function () {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        });
-      }
-    });
-  }
+navbar.style.background = "rgba(0,0,0,0.45)";
 
-  // Smooth scroll for anchor links
-  function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener('click', function (e) {
-        var targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        var target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          var offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 80;
-          var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        }
-      });
-    });
-  }
+}
 
+});
 
-  // Init everything
-  document.addEventListener('DOMContentLoaded', function () {
-    storeEnglish();
-    initNav();
-    initLangToggle();
-    initScrollAnimations();
-    initCounters();
-    initWhatsApp();
-    initForms();
-    initSmoothScroll();
-  });
+/* SIMPLE FADE-IN ANIMATION */
 
-})();
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity = "1";
+entry.target.style.transform = "translateY(0px)";
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll(
+".service-card,.equipment-card,.projects-grid img,.director-box,.stat-box"
+).forEach((el)=>{
+
+el.style.opacity = "0";
+el.style.transform = "translateY(40px)";
+el.style.transition = "0.7s ease";
+
+observer.observe(el);
+
+});
